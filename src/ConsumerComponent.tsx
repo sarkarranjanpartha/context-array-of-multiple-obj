@@ -8,8 +8,10 @@ const ConsumerComponent: React.FC = () => {
     <div>
       {/* Access the context values */}
       <p>Main Line: {JSON.stringify(placeOrderContext?.mainLine)}</p>
-      <p>Upsell: {JSON.stringify(placeOrderContext?.upsell)}</p>
+      {/* <p>Upsell: {JSON.stringify(placeOrderContext?.upsell)}</p> */}
       {/* Access other context values as needed */}
     </div>
   );
 };
+
+export default ConsumerComponent;
