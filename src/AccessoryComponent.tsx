@@ -5,7 +5,8 @@ const AccessoryComponent: React.FC = () => {
   const placeOrderContext = useContext(PlaceOrderContext);
 
   const handleUpdateUpsell = () => {
-    const updatedUpsell = [...]; // Update the upsell array as needed
+    const updatedUpsell = [...]; 
+    // Update the upsell array as needed
     placeOrderContext?.updateUpsell(updatedUpsell);
   };
 

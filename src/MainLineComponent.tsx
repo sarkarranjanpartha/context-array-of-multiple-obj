@@ -5,7 +5,8 @@ const MainLineComponent: React.FC = () => {
   const placeOrderContext = useContext(PlaceOrderContext);
 
   const handleUpdateMainLine = () => {
-    const updatedMainLine = [...]; // Update the mainLine array as needed
+    const updatedMainLine = [...]; 
+    // Update the mainLine array as needed
     placeOrderContext?.updateMainLine(updatedMainLine);
   };
 
