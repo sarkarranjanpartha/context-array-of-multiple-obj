@@ -21,6 +21,8 @@ export interface PlaceOrderContextType {
   accessoryCharges: AccessoryCharge[];
   extraCharges: ExtraCharge[];
   perUnitExtraCharges: PerUnitExtraCharge[];
+  updateDiscountPercent: (updatedDiscountPercent: number | undefined) => void;
+  updateFreeQtyPercent: (updatedFreeQtyPercent: number | undefined) => void;
   updateMainLine: (updatedMainLine: MainLine[]) => void;
   updateUpsell: (updatedUpsell: Upsell[]) => void;
   updateAccessoryCharges: (updatedAccessoryCharges: AccessoryCharge[]) => void;
@@ -40,6 +42,8 @@ export const PlaceOrderProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const [placeOrderContext, setPlaceOrderContext] =
     useState<PlaceOrderContextType>({
+      discountPercent: 0, // Definition discountPercent is optional as we declare discountPercent as optional
+      // freeQtyPercent: 0,
       shipping: 0,
       handling: 0,
       taxPercent: 0,
@@ -49,6 +53,18 @@ export const PlaceOrderProvider: React.FC<{ children: React.ReactNode }> = ({
       accessoryCharges: [],
       extraCharges: [],
       perUnitExtraCharges: [],
+      updateDiscountPercent: (updatedDiscountPercent) => {
+        setPlaceOrderContext((prevContext) => ({
+          ...prevContext,
+          discountPercent: updatedDiscountPercent,
+        }));
+      },
+      updateFreeQtyPercent: (updatedFreeQtyPercent) => {
+        setPlaceOrderContext((prevContext) => ({
+          ...prevContext,
+          freeQtyPercent: updatedFreeQtyPercent,
+        }));
+      },
       updateMainLine: (updatedMainLine) => {
         setPlaceOrderContext((prevContext) => ({
           ...prevContext,

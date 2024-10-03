@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { PlaceOrderContext } from "./PlaceOrderContext";
+import { discountPercent, freeQtyPercent } from "./defaultValue";
 
 const ConsumerComponent: React.FC = () => {
   const placeOrderContext = useContext(PlaceOrderContext);
@@ -7,6 +8,10 @@ const ConsumerComponent: React.FC = () => {
   return (
     <div>
       {/* Access the context values */}
+      <p>
+        Discount (%):{placeOrderContext?.discountPercent ?? discountPercent}
+      </p>
+      <p>Free Qty (%):{placeOrderContext?.freeQtyPercent ?? freeQtyPercent}</p>
       <p>
         Main Line:
         {placeOrderContext?.mainLine.map((item) => {
