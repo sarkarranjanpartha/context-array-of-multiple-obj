@@ -7,16 +7,8 @@ const ExtraComponent: React.FC = () => {
   const handleUpdateExtraCharge = () => {
     // const updatedExtraCharge = [...];
     const updatedExtraCharge = [
-      {
-        Quantity: 1,
-        Price: 40,
-        LineTotal: 40,
-      },
-      {
-        Quantity: 1,
-        Price: 19.95,
-        LineTotal: 19.95,
-      },
+      { id: 1, Quantity: 1, Price: 40, LineTotal: 40 },
+      { id: 2, Quantity: 1, Price: 19.95, LineTotal: 19.95 },
     ];
     // Update the Extra charges array as needed
     placeOrderContext?.updateExtraCharges(updatedExtraCharge);

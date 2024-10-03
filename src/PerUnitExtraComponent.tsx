@@ -7,26 +7,10 @@ const PerUnitExtraComponent: React.FC = () => {
   const handleUpdatePerUnitExtraCharge = () => {
     // const updatedPerUnitExtra = [...];
     const updatedPerUnitExtra = [
-      {
-        Quantity: 500,
-        Price: 0.24,
-        LineTotal: 120,
-      },
-      {
-        Quantity: 500,
-        Price: 49,
-        LineTotal: 24500,
-      },
-      {
-        Quantity: 500,
-        Price: 0.29,
-        LineTotal: 145,
-      },
-      {
-        Quantity: 500,
-        Price: 49,
-        LineTotal: 24500,
-      },
+      { id: 1, Quantity: 500, Price: 0.24, LineTotal: 120 },
+      { id: 2, Quantity: 500, Price: 49, LineTotal: 24500 },
+      { id: 3, Quantity: 500, Price: 0.29, LineTotal: 145 },
+      { id: 4, Quantity: 500, Price: 49, LineTotal: 24500 },
     ];
     // Update the upsell array as needed
     placeOrderContext?.updatePerUnitExtraCharges(updatedPerUnitExtra);
