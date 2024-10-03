@@ -8,22 +8,23 @@ const ConsumerComponent: React.FC = () => {
   return (
     <div>
       {/* Access the context values */}
-      <p>
+      <div>
         Discount (%):{placeOrderContext?.discountPercent ?? discountPercent}
-      </p>
-      <p>Free Qty (%):{placeOrderContext?.freeQtyPercent ?? freeQtyPercent}</p>
-      <p>
+      </div>
+      <div>
+        Free Qty (%):{placeOrderContext?.freeQtyPercent ?? freeQtyPercent}
+      </div>
+      <div>
         Main Line:
         {placeOrderContext?.mainLine.map((item) => {
-          return <pre>{JSON.stringify(item)}</pre>;
+          return <pre key={item.id}>{JSON.stringify(item)}</pre>;
         })}
-      </p>
-      <p>
-        Upsell:{" "}
+      </div>
+      <div>
         {placeOrderContext?.upsell.map((item) => {
-          return <pre>{JSON.stringify(item)}</pre>;
+          return <pre key={item.id}>{JSON.stringify(item)}</pre>;
         })}
-      </p>
+      </div>
       {/* Access other context values as needed */}
     </div>
   );

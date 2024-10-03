@@ -26,6 +26,7 @@ export interface MainLine {
 }
 
 export interface Upsell {
+  id: number;
   Quantity: number;
   Price: number;
   LinelTotal: number;
