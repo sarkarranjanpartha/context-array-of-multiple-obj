@@ -4,7 +4,7 @@ import { PlaceOrderContext } from "../src/PlaceOrderContext";
 const MainLineComponent: React.FC = () => {
   const placeOrderContext = useContext(PlaceOrderContext);
 
-  const handleUpdateDiscountPercent = () => {
+  const handleUpdateOtherValues = () => {
     const updatedDiscountPercent = 200;
     placeOrderContext?.updateDiscountPercent(updatedDiscountPercent);
     const updateFreeQtyPercent = 100;
@@ -30,7 +30,7 @@ const MainLineComponent: React.FC = () => {
       },
     ];
     // Update the mainLine array as needed
-    handleUpdateDiscountPercent();
+    handleUpdateOtherValues();
     placeOrderContext?.updateMainLine(updatedMainLine);
   };
 
