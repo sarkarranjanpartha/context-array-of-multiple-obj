@@ -9,7 +9,7 @@ export interface PriceDetails {
   handling: number;
   taxPercent: number;
   currency?: string;
-  environmentalTax: number;
+  environmentalTax?: number;
   mainLine: MainLine[];
   upsell: Upsell[];
   accessoryCharges: AccessoryCharge[];
@@ -33,18 +33,21 @@ export interface Upsell {
 }
 
 export interface AccessoryCharge {
+  id:number;
   Quantity: number;
   Price: number;
   LineTotal: number;
 }
 
 export interface ExtraCharge {
+  id:number;
   Quantity: number;
   Price: number;
   LineTotal: number;
 }
 
 export interface PerUnitExtraCharge {
+  id: number;
   Quantity: number;
   Price: number;
   LineTotal: number;

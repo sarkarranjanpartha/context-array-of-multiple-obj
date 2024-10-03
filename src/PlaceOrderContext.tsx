@@ -15,7 +15,7 @@ export interface PlaceOrderContextType {
   handling: number;
   taxPercent: number;
   currency?: string;
-  environmentalTax: number;
+  environmentalTax?: number;
   mainLine: MainLine[];
   upsell: Upsell[];
   accessoryCharges: AccessoryCharge[];
@@ -23,6 +23,11 @@ export interface PlaceOrderContextType {
   perUnitExtraCharges: PerUnitExtraCharge[];
   updateDiscountPercent: (updatedDiscountPercent: number | undefined) => void;
   updateFreeQtyPercent: (updatedFreeQtyPercent: number | undefined) => void;
+  updateShipping: (updatedShipping: number) => void;
+  updateHandling: (updatedHandling: number) => void;
+  updateTaxPercent: (updatedTaxPercent: number) => void;
+  updateCurrency: (updatedCurrency: string | undefined) => void;
+  updateEnvironmentalTax: (updatedEnvironmentalTax: number | undefined) => void;
   updateMainLine: (updatedMainLine: MainLine[]) => void;
   updateUpsell: (updatedUpsell: Upsell[]) => void;
   updateAccessoryCharges: (updatedAccessoryCharges: AccessoryCharge[]) => void;
@@ -47,6 +52,7 @@ export const PlaceOrderProvider: React.FC<{ children: React.ReactNode }> = ({
       shipping: 0,
       handling: 0,
       taxPercent: 0,
+      currency: "",
       environmentalTax: 0,
       mainLine: [],
       upsell: [],
@@ -63,6 +69,37 @@ export const PlaceOrderProvider: React.FC<{ children: React.ReactNode }> = ({
         setPlaceOrderContext((prevContext) => ({
           ...prevContext,
           freeQtyPercent: updatedFreeQtyPercent,
+        }));
+      },
+
+      updateShipping: (updatedShipping) => {
+        setPlaceOrderContext((prevContext) => ({
+          ...prevContext,
+          shipping: updatedShipping,
+        }));
+      },
+      updateHandling: (updatedHandling) => {
+        setPlaceOrderContext((prevContext) => ({
+          ...prevContext,
+          handling: updatedHandling,
+        }));
+      },
+      updateTaxPercent: (updatedTaxPercent) => {
+        setPlaceOrderContext((prevContext) => ({
+          ...prevContext,
+          taxPercent: updatedTaxPercent,
+        }));
+      },
+      updateCurrency: (updatedCurrency) => {
+        setPlaceOrderContext((prevContext) => ({
+          ...prevContext,
+          currency: updatedCurrency,
+        }));
+      },
+      updateEnvironmentalTax: (updatedEnvironmentalTax) => {
+        setPlaceOrderContext((prevContext) => ({
+          ...prevContext,
+          environmentalTax: updatedEnvironmentalTax,
         }));
       },
       updateMainLine: (updatedMainLine) => {
