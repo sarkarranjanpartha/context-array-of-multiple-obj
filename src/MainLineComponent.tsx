@@ -7,8 +7,8 @@ const MainLineComponent: React.FC = () => {
   const handleUpdateOtherValues = () => {
     const updatedDiscountPercent = 200;
     placeOrderContext?.updateDiscountPercent(updatedDiscountPercent);
-    const updateFreeQtyPercent = 100;
-    placeOrderContext?.updateFreeQtyPercent(updateFreeQtyPercent);
+    const updatedFreeQtyPercent = 100;
+    placeOrderContext?.updateFreeQtyPercent(updatedFreeQtyPercent);
   };
 
   const handleUpdateMainLine = () => {
@@ -30,8 +30,8 @@ const MainLineComponent: React.FC = () => {
       },
     ];
     // Update the mainLine array as needed
-    handleUpdateOtherValues();
     placeOrderContext?.updateMainLine(updatedMainLine);
+    handleUpdateOtherValues();
   };
 
   return (

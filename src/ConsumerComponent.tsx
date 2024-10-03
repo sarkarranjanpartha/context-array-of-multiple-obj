@@ -1,6 +1,11 @@
 import React, { useContext } from "react";
 import { PlaceOrderContext } from "./PlaceOrderContext";
-import { discountPercent, freeQtyPercent } from "./defaultValue";
+import {
+  currency,
+  discountPercent,
+  environmentalTax,
+  freeQtyPercent,
+} from "./defaultValue";
 
 const ConsumerComponent: React.FC = () => {
   const placeOrderContext = useContext(PlaceOrderContext);
@@ -20,11 +25,20 @@ const ConsumerComponent: React.FC = () => {
           return <pre key={item.id}>{JSON.stringify(item)}</pre>;
         })}
       </div>
+      <div>Shipping:{placeOrderContext?.shipping}</div>
+      <div>Handling:{placeOrderContext?.handling}</div>
+      <div>Tax (%):{placeOrderContext?.taxPercent}</div>
+      <div>currency:{placeOrderContext?.currency ?? currency}</div>
+      <div>
+        EnvironmentalTax:
+        {placeOrderContext?.environmentalTax ?? environmentalTax}
+      </div>
       <div>
         {placeOrderContext?.upsell.map((item) => {
           return <pre key={item.id}>{JSON.stringify(item)}</pre>;
         })}
       </div>
+
       {/* Access other context values as needed */}
     </div>
   );

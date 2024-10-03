@@ -1,42 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import {
-  AccessoryCharge,
-  ExtraCharge,
-  MainLine,
-  PriceDetails,
-  Upsell,
-  PerUnitExtraCharge,
-} from "../src/types/price-details";
-
-export interface PlaceOrderContextType {
-  discountPercent?: number;
-  freeQtyPercent?: number;
-  shipping: number;
-  handling: number;
-  taxPercent: number;
-  currency?: string;
-  environmentalTax?: number;
-  mainLine: MainLine[];
-  upsell: Upsell[];
-  accessoryCharges: AccessoryCharge[];
-  extraCharges: ExtraCharge[];
-  perUnitExtraCharges: PerUnitExtraCharge[];
-  updateDiscountPercent: (updatedDiscountPercent: number | undefined) => void;
-  updateFreeQtyPercent: (updatedFreeQtyPercent: number | undefined) => void;
-  updateShipping: (updatedShipping: number) => void;
-  updateHandling: (updatedHandling: number) => void;
-  updateTaxPercent: (updatedTaxPercent: number) => void;
-  updateCurrency: (updatedCurrency: string | undefined) => void;
-  updateEnvironmentalTax: (updatedEnvironmentalTax: number | undefined) => void;
-  updateMainLine: (updatedMainLine: MainLine[]) => void;
-  updateUpsell: (updatedUpsell: Upsell[]) => void;
-  updateAccessoryCharges: (updatedAccessoryCharges: AccessoryCharge[]) => void;
-  updateExtraCharges: (updatedExtraCharges: ExtraCharge[]) => void;
-  updatePerUnitExtraCharges: (
-    updatedPerUnitExtraCharges: PerUnitExtraCharge[]
-  ) => void;
-  // Add more update functions as needed
-}
+import { PlaceOrderContextType } from "./types/place-order-context";
 
 export const PlaceOrderContext = createContext<
   PlaceOrderContextType | undefined
@@ -71,7 +34,6 @@ export const PlaceOrderProvider: React.FC<{ children: React.ReactNode }> = ({
           freeQtyPercent: updatedFreeQtyPercent,
         }));
       },
-
       updateShipping: (updatedShipping) => {
         setPlaceOrderContext((prevContext) => ({
           ...prevContext,
