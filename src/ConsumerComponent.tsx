@@ -7,8 +7,18 @@ const ConsumerComponent: React.FC = () => {
   return (
     <div>
       {/* Access the context values */}
-      <p>Main Line: {JSON.stringify(placeOrderContext?.mainLine)}</p>
-      <p>Upsell: {JSON.stringify(placeOrderContext?.upsell)}</p>
+      <p>
+        Main Line:
+        {placeOrderContext?.mainLine.map((item) => {
+          return <pre>{JSON.stringify(item)}</pre>;
+        })}
+      </p>
+      <p>
+        Upsell:{" "}
+        {placeOrderContext?.upsell.map((item) => {
+          return <pre>{JSON.stringify(item)}</pre>;
+        })}
+      </p>
       {/* Access other context values as needed */}
     </div>
   );
