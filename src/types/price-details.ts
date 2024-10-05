@@ -33,14 +33,14 @@ export interface Upsell {
 }
 
 export interface AccessoryCharge {
-  id:number;
+  id: number;
   Quantity: number;
   Price: number;
   LineTotal: number;
 }
 
 export interface ExtraCharge {
-  id:number;
+  id: number;
   Quantity: number;
   Price: number;
   LineTotal: number;
@@ -51,4 +51,9 @@ export interface PerUnitExtraCharge {
   Quantity: number;
   Price: number;
   LineTotal: number;
+}
+
+export interface ProductTotalProps {
+  priceData: PriceDetails;
+  locale: string;
 }

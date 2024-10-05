@@ -20,8 +20,8 @@ const UpsellComponent: React.FC = () => {
   const handleUpdateUpsell = () => {
     // const updatedUpsell = [...];
     const updatedUpsell = [
-      { id: 1, Quantity: 20, Price: 1.18, LinelTotal: 23.6 },
-      { id: 2, Quantity: 0, Price: 0, LinelTotal: 0 },
+      { id: 1, Quantity: 200, Price: 10, LinelTotal: 2000 },
+      { id: 2, Quantity: 300, Price: 10, LinelTotal: 3000 },
     ];
     // Update the upsell array as needed
     placeOrderContext?.updateUpsell(updatedUpsell);

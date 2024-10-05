@@ -16,16 +16,16 @@ const MainLineComponent: React.FC = () => {
     const updatedMainLine = [
       {
         id: 2,
-        quantity: 100,
-        itemPrice: 1.39,
-        packagePrice: 139,
+        quantity: 200,
+        itemPrice: 10,
+        packagePrice: 2000,
         freeQuantity: 0,
       },
       {
         id: 3,
-        quantity: 0,
-        itemPrice: 0,
-        packagePrice: 0,
+        quantity: 300,
+        itemPrice: 10,
+        packagePrice: 3000,
         freeQuantity: 0,
       },
     ];
