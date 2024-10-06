@@ -1,10 +1,10 @@
 import React from "react";
 import { PlaceOrderProvider } from "./PlaceOrderContext";
-import MainLineComponent from "../src/MainLineComponent";
 import ConsumerComponent from "../src/ConsumerComponent";
-import UpsellComponent from "../src/UpsellComponent";
 import ProductWisePriceTotal from "./ProductWisePriceTotal";
 import { Divider } from "@mui/material";
+import UpsellParentComponent from "./UpsellParentComponent";
+import MainLineParentComponent from "./MainLineParentComponent";
 
 const App: React.FC = () => {
   return (
@@ -12,11 +12,11 @@ const App: React.FC = () => {
       <div>
         <div className="mx-5 my-5 flex justify-between">
           <div>
-            <MainLineComponent />
+            <MainLineParentComponent />
           </div>
 
           <div>
-            <UpsellComponent />
+            <UpsellParentComponent />
           </div>
           <div>
             <ConsumerComponent />

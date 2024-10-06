@@ -100,6 +100,34 @@ const ProductTotal = () => {
   return (
     <>
       <div className="tw-flex tw-justify-between tw-mx-10 tw-my-5">
+        <div>MainLine Total Mock</div>
+        <div>
+          {currency}
+          {mainLineTotal_mock}
+        </div>
+      </div>
+      <div className="tw-flex tw-justify-between tw-mx-10 tw-my-5">
+        <div>MainLine Total Context</div>
+        <div>
+          {currency}
+          {mainLineTotal}
+        </div>
+      </div>
+      <div className="tw-flex tw-justify-between tw-mx-10 tw-my-5">
+        <div>Upsell Total Mock</div>
+        <div>
+          {currency}
+          {upsellTotal_mock}
+        </div>
+      </div>
+      <div className="tw-flex tw-justify-between tw-mx-10 tw-my-5">
+        <div>Upsell Total Context</div>
+        <div>
+          {currency}
+          {upsellTotal}
+        </div>
+      </div>
+      <div className="tw-flex tw-justify-between tw-mx-10 tw-my-5">
         <div>Product Total Mock</div>
         <div>
           {currency}
