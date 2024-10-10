@@ -22,70 +22,70 @@
       ],
       "upsell": [
         {
-          "Quantity": 20,
-          "Price": 1.18,
-          "LinelTotal": 23.60
+          "quantity": 20,
+          "price": 1.18,
+          "lineTotal": 23.60
         },
         {
-          "Quantity": 0,
-          "Price": 0,
-          "LinelTotal": 0
+          "quantity": 0,
+          "price": 0,
+          "lineTotal": 0
         }
       ],
       "accessoryCharges": [
         {
-          "Quantity": 10,
-          "Price": 0.1,
-          "LineTotal": 1
+          "quantity": 10,
+          "price": 0.1,
+          "lineTotal": 1
         },
         {
-          "Quantity": 20,
-          "Price": 0.39,
-          "LineTotal": 7.8
+          "quantity": 20,
+          "price": 0.39,
+          "lineTotal": 7.8
         },
         {
-          "Quantity": 30,
-          "Price": 0.24,
-          "LineTotal": 7.20
+          "quantity": 30,
+          "price": 0.24,
+          "lineTotal": 7.20
         },
         {
-          "Quantity": 40,
-          "Price": 0.49,
-          "LineTotal": 19.60
+          "quantity": 40,
+          "price": 0.49,
+          "lineTotal": 19.60
         }
       ],
       "extraCharges": [
           {
-            "Quantity": 1,
-            "Price": 40,
-            "LineTotal": 40
+            "quantity": 1,
+            "price": 40,
+            "lineTotal": 40
           },
           {
-            "Quantity": 1,
-            "Price": 19.95,
-            "LineTotal": 19.95
+            "quantity": 1,
+            "price": 19.95,
+            "lineTotal": 19.95
           }
         ],
         "perUnitExtraCharges": [
           {
-            "Quantity": 500,
-            "Price": 0.24,
-            "LineTotal": 120
+            "quantity": 500,
+            "price": 0.24,
+            "lineTotal": 120
           },
           {
-            "Quantity": 500,
-            "Price": 49,
-            "LineTotal": 24500
+            "quantity": 500,
+            "price": 49,
+            "lineTotal": 24500
           },
           {
-            "Quantity": 500,
-            "Price": 0.29,
-            "LineTotal": 145
+            "quantity": 500,
+            "price": 0.29,
+            "lineTotal": 145
           },
           {
-            "Quantity": 500,
-            "Price": 49,
-            "LineTotal": 24500
+            "quantity": 500,
+            "price": 49,
+            "lineTotal": 24500
           }
         ]
       

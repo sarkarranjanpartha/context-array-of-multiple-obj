@@ -27,30 +27,30 @@ export interface MainLine {
 
 export interface Upsell {
   id: number;
-  Quantity: number;
-  Price: number;
-  LinelTotal: number;
+  quantity: number;
+  price: number;
+  lineTotal: number;
 }
 
 export interface AccessoryCharge {
   id: number;
-  Quantity: number;
-  Price: number;
-  LineTotal: number;
+  quantity: number;
+  price: number;
+  lineTotal: number;
 }
 
 export interface ExtraCharge {
   id: number;
-  Quantity: number;
-  Price: number;
-  LineTotal: number;
+  quantity: number;
+  price: number;
+  lineTotal: number;
 }
 
 export interface PerUnitExtraCharge {
   id: number;
-  Quantity: number;
-  Price: number;
-  LineTotal: number;
+  quantity: number;
+  price: number;
+  lineTotal: number;
 }
 
 export interface ProductTotalProps {
