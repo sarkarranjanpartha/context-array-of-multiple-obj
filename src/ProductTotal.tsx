@@ -42,7 +42,7 @@ const ProductTotal = () => {
 
   const upsellTotal_mock: number = returnLocaleBasedValue(
     priceDetails.upsell.reduce(
-      (accumulator, current) => accumulator + current.LinelTotal,
+      (accumulator, current) => accumulator + current.lineTotal,
       0
     )
   );
@@ -50,7 +50,7 @@ const ProductTotal = () => {
 
   const upsellTotal: number = returnLocaleBasedValue(
     placeOrderContext?.upsell.reduce(
-      (accumulator, current) => accumulator + current.LinelTotal,
+      (accumulator, current) => accumulator + current.lineTotal,
       0
     ) ?? 0
   );
@@ -58,19 +58,19 @@ const ProductTotal = () => {
 
   const accessoryChargesTotal: number = returnLocaleBasedValue(
     priceDetails.accessoryCharges.reduce(
-      (accumulator, current) => accumulator + current.LineTotal,
+      (accumulator, current) => accumulator + current.lineTotal,
       0
     )
   );
   const extraChargesTotal: number = returnLocaleBasedValue(
     priceDetails.extraCharges.reduce(
-      (accumulator, current) => accumulator + current.LineTotal,
+      (accumulator, current) => accumulator + current.lineTotal,
       0
     )
   );
   const perUnitExtraChargesTotal: number = returnLocaleBasedValue(
     priceDetails.perUnitExtraCharges.reduce(
-      (accumulator, current) => accumulator + current.LineTotal,
+      (accumulator, current) => accumulator + current.lineTotal,
       0
     )
   );
