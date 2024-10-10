@@ -1,11 +1,14 @@
 import { createContext, useContext, useState } from "react";
-import { PlaceOrderContextType } from "./types/place-order-context";
+import {
+  PlaceOrderContextType,
+  PlaceOrderProviderProps,
+} from "./types/place-order-context";
 
 export const PlaceOrderContext = createContext<
   PlaceOrderContextType | undefined
 >(undefined);
 
-export const PlaceOrderProvider: React.FC<{ children: React.ReactNode }> = ({
+export const PlaceOrderProvider: React.FC<PlaceOrderProviderProps> = ({
   children,
 }) => {
   const [placeOrderContext, setPlaceOrderContext] =

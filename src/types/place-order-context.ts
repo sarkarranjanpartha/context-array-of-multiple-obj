@@ -35,3 +35,7 @@ export interface PlaceOrderContextType {
   ) => void;
   // Add more update functions as needed
 }
+
+export interface PlaceOrderProviderProps {
+  children: React.ReactNode;
+}
